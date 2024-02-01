@@ -6,6 +6,7 @@
             <th>Numero</th>
             <th>Peso</th>
             <th>Altura</th>
+            <th>Detalles</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
             <td>{{pokemon.id}}</td>
             <td>{{pokemon.height}}</td>
             <td>{{pokemon.weight}}</td>
+            <td><button class="btn btn-outline-secondary"><a class="list-group-item list-group-item-action " [routerLink]="['/details']">Ver</a></button></td>
         </tr>
     </tbody>
 </table>

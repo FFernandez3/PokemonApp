@@ -18,14 +18,14 @@ export class PokemonListComponent implements OnInit{
    },
    {
     image:"aca iria la img",
-    name:"bulbasur",
+    name:"Ivysaur",
     id:1,
     height:7,
     weight:69
    },
    {
     image:"aca iria la img",
-    name:"bulbasur",
+    name:"Venusaur",
     id:1,
     height:7,
     weight:69
