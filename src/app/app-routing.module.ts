@@ -5,18 +5,18 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
 
 const routes: Routes = [
   {
-    path:'',
-    redirectTo:'home',
-    pathMatch:'full'
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
 
   },
   {
-    path:'home',
-    component:PokemonHomeComponent
+    path: 'home',
+    component: PokemonHomeComponent
   },
   {
-    path:'details',
-    component:PokemonDetailsComponent
+    path: 'pokemon/:id',
+    component: PokemonDetailsComponent
   }
 ];
 

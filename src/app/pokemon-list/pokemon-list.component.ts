@@ -28,7 +28,9 @@ export class PokemonListComponent implements OnInit{
               name: pokemonDetails.name,
               height: pokemonDetails.height,
               weight: pokemonDetails.weight,
-              image: `https://pokeapi.co/media/sprites/pokemon/${pokemonDetails.id}.png`,
+              image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonDetails.id}.png`,
+              types: pokemonDetails.types.map((type: { name: any; }) => type.name),
+              weaknesses: []
             };
 
             // Agrega el Pokémon a la lista

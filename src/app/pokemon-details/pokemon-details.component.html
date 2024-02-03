@@ -1,1 +1,21 @@
-<p>pokemon-details works!</p>
+<div *ngIf="pokemon">
+  <div>
+    <h2>Conocé más de {{ pokemon.name | titlecase }}</h2>
+    <p>ID: {{ pokemon.id }}</p>
+    <p>Altura: {{ pokemon.height }}</p>
+    <p>Peso: {{ pokemon.weight }}</p>
+    <p>Tipos: {{pokemon.types}}</p>
+    <ul>
+      <li *ngFor="let t of pokemon.types">
+        {{t.type.name}}
+      </li>
+    </ul>
+    <p>Debilidades: {{pokemon.weaknesses}}</p>
+  </div>
+  <div class="imgContainer">
+    <img [src]="pokemon.image">
+  </div>
+</div>
+<div *ngIf="!pokemon">
+  <p>Ha surgido un error cargando detalles.</p>
+</div>

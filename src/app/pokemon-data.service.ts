@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Pokemon } from './pokemon-list/Pokemon';
 
-const URL='https://pokeapi.co/api/v2/pokemon/';
+const URL='https://pokeapi.co/api/v2/pokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class PokemonDataService {
 
   }
   /*obtiene un recurso por su id */
-  public getById(){
-
+  public getById(id:number): Observable<Pokemon> {
+     return this.http.get<Pokemon>(`${URL}/${id}`);
   }
 }
